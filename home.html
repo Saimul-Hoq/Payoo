@@ -24,25 +24,141 @@
     </style>
 </head>
 <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-    <section id="navbar">
-        <div class="navbar bg-base-100 shadow-sm p-5">
+    <section>
+        <div class="flex border-b border-base-content/20 bg-base-100 p-5">
                 
             <div class="navbar-start ">
-                <div class="w-[20%]">
+                <div class="w-[30%]">
                     <img src="./assets/logo.png" alt="">
                 </div>
                 <div class="ml-2">
-                    <h1 class="text-2xl">$ <span id="cash-amount">0</span></h1>
-                    <p class="text-base-content/50">Available Balance</p>
+                    <h1 class="text-2xl">$ <span id="total-amount">45000</span></h1>
+                    <p class="text-base-content/50 leading-none">Available Balance</p>
                 </div>
                 
             </div>
         
-            <div class="navbar-end ">
-                <a class="btn bg-base-100 border-2 rounded-md font-normal text-xl text-base-content/60"><i class="fa-solid fa-right-from-bracket"></i>
- Log Out</a>
+            <div class="navbar-end scale-90">
+                <button class="btn bg-base-100 rounded-md font-normal text-xl text-base-content/60"><i class="fa-solid fa-right-from-bracket"></i>
+ Log Out</button>
             </div>
         </div>
     </section>
+    <section class="px-5 py-8 bg-base-100 rounded-b-3xl">
+        <h1 class="text-2xl font-semibold">Welcome to Pay<span class="text-primary">oo</span></h1>
+        <p class="text-base-content/50 mt-3">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+
+        <div class="grid grid-cols-3 gap-3 mt-5">
+            <!-- Add Money Button______________________________________ -->
+            <button id="addMoney-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+                <p class="text-primary font-normal group-hover:text-white">Add Money</p>
+            </button>
+            <!-- Cashout Button______________________________________ -->
+            <button id="cashout-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+                <p class="text-primary font-normal group-hover:text-white">Cashout</p>
+            </button>
+            <!-- Transfer Button______________________________________ -->
+            <button id="transfer-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+                <p class="text-primary font-normal group-hover:text-white">Transfer</p>
+            </button>
+            <!-- Bonus Button______________________________________ -->
+            <button id="bonus-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+                <p class="text-primary font-normal group-hover:text-white">Get Bonus</p>
+            </button>
+            <!-- Pay Bill Button______________________________________ -->
+            <button id="pay-bill-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+                <p class="text-primary font-normal group-hover:text-white">Pay Bill</p>
+            </button>
+            <!-- Transactions Button______________________________________ -->
+            <button id="transactions-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+                <p class="text-primary font-normal group-hover:text-white">Transactions</p>
+            </button>
+            
+        </div>
+    </section>
+
+    <!-- Cashout Section______________________________________________-->
+    <section id="cashout-section" class="my-4 w-11/12 mx-auto hidden">
+        <h1 class="text-2xl">Cashout</h1>
+        <fieldset class="fieldset bg-base-100 border-base-300 rounded-2xl w-full border p-5 mx-auto my-4">
+        <!-- <legend class="fieldset-legend">Login</legend> -->
+
+        <label class="label text-neutral text-sm">Agent Number</label>
+        <input id="agent-number" maxlength="11" minlength="11" type="text" class="input rounded-full w-full mb-3 bg-base-200" placeholder="Enter 11 digit number" />
+        <label class="label text-neutral text-sm">Amount</label>
+        <input id="amount" maxlength="11" minlength="11" type="text" class="input rounded-full w-full mb-3 bg-base-200" placeholder="Enter amount to withdraw" />
+        <label class="label text-neutral text-sm">Pin Number</label>
+        <input id="pin" maxlength="4" minlength="4" type="password" class="input rounded-full w-full bg-base-200" placeholder="Enter 4 digit pin number" />
+
+        <button id="withdraw-btn" class="btn btn-primary mt-4 rounded-full w-full text-xl font-normal">Withdraw Money</button>
+        </fieldset>
+    </section>
+
+    <!-- Transfer Section______________________________________________-->
+    <section id="transfer-section" class="my-4 w-11/12 mx-auto hidden">
+        <h1 class="text-2xl">Transfer Money</h1>
+        <fieldset class="fieldset bg-base-100 border-base-300 rounded-2xl w-full border p-5 mx-auto my-4">
+        <!-- <legend class="fieldset-legend">Login</legend> -->
+
+        <label class="label text-neutral text-sm">User Account Number</label>
+        <input id="user-account-number" maxlength="11" minlength="11" type="text" class="input rounded-full w-full mb-3 bg-base-200" placeholder="Enter 11 digit number" />
+        <label class="label text-neutral text-sm">Amount</label>
+        <input id="transfer-amount" maxlength="11" minlength="11" type="text" class="input rounded-full w-full mb-3 bg-base-200" placeholder="Enter amount to withdraw" />
+        <label class="label text-neutral text-sm">Pin Number</label>
+        <input id="transfer-pin" maxlength="4" minlength="4" type="password" class="input rounded-full w-full bg-base-200" placeholder="Enter 4 digit pin number" />
+
+        <button id="send-now-btn" class="btn btn-primary mt-4 rounded-full w-full text-xl font-normal">Send Now</button>
+        </fieldset>
+    </section>
+
+    <!-- Bonus Section______________________________________________-->
+    <section id="bonus-section" class="my-4 w-11/12 mx-auto hidden">
+        <h1 class="text-2xl">Get Bonus</h1>
+        <fieldset class="fieldset bg-base-100 border-base-300 rounded-2xl w-full border p-5 mx-auto my-4">
+        <!-- <legend class="fieldset-legend">Login</legend> -->
+
+        <label class="label text-neutral text-sm">Enter Bonus Coupon</label>
+        <input id="bonus" maxlength="11" minlength="11" type="text" class="input rounded-full w-full mb-3 bg-base-200" placeholder="Enter your bonus coupon" />
+        
+
+        <button id="get-bonus-btn" class="btn btn-primary mt-4 rounded-full w-full text-xl font-normal">Get Bonus</button>
+        </fieldset>
+    </section>
+
+    <!-- Add Money Section______________________________________________-->
+    <section id="addMoney-section" class="my-4 w-11/12 mx-auto hidden">
+        <h1 class="text-2xl">Add Money</h1>
+        <fieldset class="fieldset bg-base-100 border-base-300 rounded-2xl w-full border p-5 mx-auto my-4">
+        <!-- <legend class="fieldset-legend">Login</legend> -->
+        
+        <label class="label text-neutral text-sm">Select A Bank</label>
+        <select id="user-bank" class="select rounded-full w-full mb-3 bg-base-200">
+            <option value="" disabled selected hidden>Select your bank</option>
+            <option value="dbbl">Dutch-Bangla Bank</option>
+            <option value="islami">Islami Bank Bangladesh</option>
+            <option value="brac">BRAC Bank</option>
+            <option value="city">City Bank</option>
+            <option value="ebl">Eastern Bank (EBL)</option>
+        </select>
+        <label class="label text-neutral text-sm">Bank Account Number</label>
+        <input id="bank-account-number" maxlength="11" minlength="11" type="text" class="input rounded-full w-full mb-3 bg-base-200" placeholder="Enter 11 digit account number" />
+        <label class="label text-neutral text-sm">Amount to add</label>
+        <input id="addMoney-amount" maxlength="11" minlength="11" type="text" class="input rounded-full w-full mb-3 bg-base-200" placeholder="Add amount to withdraw" />
+        <label class="label text-neutral text-sm">Pin Number</label>
+        <input id="addMoney-pin" maxlength="4" minlength="4" type="password" class="input rounded-full w-full bg-base-200" placeholder="Enter 4 digit pin number" />
+
+        <button id="add-now-btn" class="btn btn-primary mt-4 rounded-full w-full text-xl font-normal">Add Money</button>
+        </fieldset>
+    </section>
+
+
+   <script src="./home.js"></script>
+   <script src="./cashout.js"></script>
 </body>
 </html>
