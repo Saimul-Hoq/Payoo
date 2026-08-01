@@ -24,7 +24,7 @@
     </style>
 </head>
 <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-    <section>
+    <section id="header">
         <div class="flex border-b border-base-content/20 bg-base-100 p-5">
                 
             <div class="navbar-start ">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </section>
-    <section class="px-5 py-8 bg-base-100 rounded-b-3xl">
+    <section class="px-5 py-8 bg-base-100 rounded-b-3xl border-b-2 border-base-content/10">
         <h1 class="text-2xl font-semibold">Welcome to Pay<span class="text-primary">oo</span></h1>
         <p class="text-base-content/50 mt-3">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
 
@@ -56,27 +56,27 @@
             </button>
             <!-- Cashout Button______________________________________ -->
             <button id="cashout-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
-                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+                <div ><img class="mx-auto" src="./assets/opt-2.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Cashout</p>
             </button>
             <!-- Transfer Button______________________________________ -->
             <button id="transfer-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
-                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+                <div ><img class="mx-auto" src="./assets/opt-3.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Transfer</p>
             </button>
             <!-- Bonus Button______________________________________ -->
             <button id="bonus-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
-                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+                <div ><img class="mx-auto" src="./assets/opt-4.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Get Bonus</p>
             </button>
             <!-- Pay Bill Button______________________________________ -->
-            <button id="pay-bill-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
-                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+            <button id="payBill-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
+                <div ><img class="mx-auto" src="./assets/opt-5.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Pay Bill</p>
             </button>
             <!-- Transactions Button______________________________________ -->
             <button id="transactions-btn" class="btn h-full flex-col py-4 rounded-xl btn-primary btn-soft group">
-                <div ><img class="mx-auto" src="./assets/opt-1.png" alt=""></div>
+                <div ><img class="mx-auto" src="./assets/opt-6.png" alt=""></div>
                 <p class="text-primary font-normal group-hover:text-white">Transactions</p>
             </button>
             
@@ -153,12 +153,43 @@
         <label class="label text-neutral text-sm">Pin Number</label>
         <input id="addMoney-pin" maxlength="4" minlength="4" type="password" class="input rounded-full w-full bg-base-200" placeholder="Enter 4 digit pin number" />
 
-        <button id="add-now-btn" class="btn btn-primary mt-4 rounded-full w-full text-xl font-normal">Add Money</button>
+        <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full w-full text-xl font-normal">Add Money</button>
         </fieldset>
     </section>
 
+    <!-- Pay Bill Section______________________________________________-->
+    <section id="payBill-section" class="my-4 w-11/12 mx-auto hidden">
+        <h1 class="text-2xl">Pay Bill</h1>
+        <fieldset class="fieldset bg-base-100 border-base-300 rounded-2xl w-full border p-5 mx-auto my-4">
+        <!-- <legend class="fieldset-legend">Login</legend> -->
+        
+        <label class="label text-neutral text-sm">Select To Pay</label>
+        <select id="bill-type" class="select rounded-full w-full mb-3 bg-base-200">
+            <option value="" disabled selected hidden>Select Bill</option>
+            <option value="electricity">Electricity Bill</option>
+            <option value="gas">Gas Bill</option>
+            <option value="water">Water Bill</option>
+        </select>
+        <label class="label text-neutral text-sm">Biller Account Number</label>
+        <input id="biller-account-number" maxlength="11" minlength="11" type="text" class="input rounded-full w-full mb-3 bg-base-200" placeholder="Enter biller account number" />
+        <label class="label text-neutral text-sm">Amount to pay</label>
+        <input id="payBill-amount" maxlength="11" minlength="11" type="text" class="input rounded-full w-full mb-3 bg-base-200" placeholder="Add amount to pay" />
+        <label class="label text-neutral text-sm">Pin Number</label>
+        <input id="payBill-pin" maxlength="4" minlength="4" type="password" class="input rounded-full w-full bg-base-200" placeholder="Enter 4 digit pin number" />
 
-   <script src="./home.js"></script>
-   <script src="./cashout.js"></script>
+        <button id="pay-now-btn" class="btn btn-primary mt-4 rounded-full w-full text-xl font-normal">Pay Now</button>
+        </fieldset>
+    </section>
+
+    <script src="./machine.js"></script>
+    <script src="./home.js"></script>
+    <script src="./cashout.js"></script>
+    <script src="./addMoney.js"></script>
+    <script src="./transfer.js"></script>
+    <script src="./bonus.js"></script>
+    <script src="./payBill.js"></script>
+
+
+
 </body>
 </html>
